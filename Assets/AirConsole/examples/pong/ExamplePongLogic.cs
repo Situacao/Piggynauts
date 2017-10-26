@@ -64,7 +64,8 @@ public class ExamplePongLogic : MonoBehaviour {
 	/// <param name="from">From.</param>
 	/// <param name="data">Data.</param>
 	void OnMessage (int device_id, JToken data) {
-		int active_player = AirConsole.instance.ConvertDeviceIdToPlayerNumber (device_id);
+
+        int active_player = AirConsole.instance.ConvertDeviceIdToPlayerNumber (device_id);
 		if (active_player != -1) {
 			if (active_player == 0) {
 				this.racketLeft.velocity = Vector3.up * (float)data ["move"];
