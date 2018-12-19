@@ -2,15 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PiggyActions : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Movement Variables
+    [SerializeField]
+    private float movementSpeed;
+
+
+    public void Move(float _val)
+    {
+        transform.position += movementSpeed * Vector3.right * _val * Time.deltaTime;
+    }
+
+    public void Jump()
+    {
+
+    }
+
 }
